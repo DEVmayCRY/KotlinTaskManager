@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\AndroidStudio\\RandomToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_task.xml",
+        "source": "D:\\AndroidStudio\\RandomToDo\\app\\src\\main\\res\\layout\\item_task.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\RandomToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_task.xml",
+        "source": "D:\\AndroidStudio\\RandomToDo\\app\\src\\main\\res\\layout\\activity_add_task.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\RandomToDo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\AndroidStudio\\RandomToDo\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

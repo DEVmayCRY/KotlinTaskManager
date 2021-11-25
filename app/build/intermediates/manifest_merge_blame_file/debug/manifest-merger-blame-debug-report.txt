@@ -1,0 +1,75 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.komat.randomtodo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:5:5-21:19
+12        android:allowBackup="true"
+12-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\Mateus\.gradle\caches\transforms-3\6006d603408a8c1ed0edf3e550c48eb5\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/Theme.RandomToDo" >
+20-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:11:9-48
+21        <activity
+21-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:12:9-19:20
+22            android:name="com.komat.randomtodo.ui.MainActivity"
+22-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:13:13-44
+23            android:exported="true" >
+23-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:14:13-36
+24            <intent-filter>
+24-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:15:13-18:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:16:17-69
+25-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:16:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:17:17-77
+27-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:17:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity android:name="com.komat.randomtodo.ui.AddTaskActivity" />
+30-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:20:9-56
+30-->D:\AndroidStudio\RandomToDo\app\src\main\AndroidManifest.xml:20:19-53
+31
+32        <provider
+32-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+33            android:name="androidx.startup.InitializationProvider"
+33-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+34            android:authorities="com.komat.randomtodo.androidx-startup"
+34-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+35            android:exported="false" >
+35-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+36            <meta-data
+36-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+37                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+37-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+38                android:value="androidx.startup" />
+38-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Mateus\.gradle\caches\transforms-3\0c8b21db498ae6b6ba22706b7f0dbd1b\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+39            <meta-data
+39-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Mateus\.gradle\caches\transforms-3\a889c36c21c1e2bc116f811fb6c47330\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+40                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+40-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Mateus\.gradle\caches\transforms-3\a889c36c21c1e2bc116f811fb6c47330\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+41                android:value="androidx.startup" />
+41-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Mateus\.gradle\caches\transforms-3\a889c36c21c1e2bc116f811fb6c47330\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+42        </provider>
+43    </application>
+44
+45</manifest>
