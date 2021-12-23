@@ -1792,6 +1792,7 @@ drawable design_snackbar_background
 drawable ic_add
 drawable ic_calendar
 drawable ic_clock_black_24dp
+drawable ic_empty_state
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2019,6 +2020,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id empty_state
 id end
 id endToStart
 id enterAlways
@@ -2062,6 +2064,7 @@ id ignore
 id ignoreRequest
 id image
 id immediateStop
+id include_empty
 id included
 id info
 id invisible
@@ -2072,6 +2075,7 @@ id item2
 id item3
 id item4
 id item_touch_helper_previous_elevation
+id iv_image
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -2151,6 +2155,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id no_task
 id none
 id normal
 id north
@@ -2180,6 +2185,9 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id radio
+id radioButton
+id radioButton2
+id radioButton3
 id ratio
 id rectangles
 id recyclerv_tasks
@@ -2288,6 +2296,7 @@ id textinput_suffix_text
 id til_date
 id til_descricao
 id til_hora
+id til_radio
 id til_titulo
 id time
 id title
@@ -2414,6 +2423,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout empty_state
 layout item_task
 layout material_chip_input_combo
 layout material_clock_display
@@ -2538,6 +2548,7 @@ string label_data
 string label_delete
 string label_description
 string label_editar
+string label_empty_message
 string label_hora
 string label_new_task
 string label_tasks

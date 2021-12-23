@@ -10,11 +10,14 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/label_tasks"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <include android:id="@+id/include_empty" layout="@layout/empty_state" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -23,10 +26,11 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/btn_fab"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
         tools:itemCount="8"
         tools:listitem="@layout/item_task"
-        app:layout_constraintBottom_toTopOf="@id/btn_fab"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
+        tools:visibility="gone" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_fab"

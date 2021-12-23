@@ -25,16 +25,20 @@ public final class ActivityMainBinding implements ViewBinding {
   public final FloatingActionButton btnFab;
 
   @NonNull
+  public final EmptyStateBinding includeEmpty;
+
+  @NonNull
   public final RecyclerView recyclervTasks;
 
   @NonNull
   public final TextView titulo;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FloatingActionButton btnFab, @NonNull RecyclerView recyclervTasks,
-      @NonNull TextView titulo) {
+      @NonNull FloatingActionButton btnFab, @NonNull EmptyStateBinding includeEmpty,
+      @NonNull RecyclerView recyclervTasks, @NonNull TextView titulo) {
     this.rootView = rootView;
     this.btnFab = btnFab;
+    this.includeEmpty = includeEmpty;
     this.recyclervTasks = recyclervTasks;
     this.titulo = titulo;
   }
@@ -72,6 +76,13 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.include_empty;
+      View includeEmpty = ViewBindings.findChildViewById(rootView, id);
+      if (includeEmpty == null) {
+        break missingId;
+      }
+      EmptyStateBinding binding_includeEmpty = EmptyStateBinding.bind(includeEmpty);
+
       id = R.id.recyclerv_tasks;
       RecyclerView recyclervTasks = ViewBindings.findChildViewById(rootView, id);
       if (recyclervTasks == null) {
@@ -84,7 +95,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnFab, recyclervTasks, titulo);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnFab, binding_includeEmpty,
+          recyclervTasks, titulo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

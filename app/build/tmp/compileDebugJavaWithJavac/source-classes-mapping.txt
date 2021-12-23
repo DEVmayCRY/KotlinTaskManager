@@ -2,6 +2,8 @@ com/komat/randomtodo/BuildConfig.java
  com.komat.randomtodo.BuildConfig
 com/komat/randomtodo/databinding/ItemTaskBinding.java
  com.komat.randomtodo.databinding.ItemTaskBinding
+com/komat/randomtodo/databinding/EmptyStateBinding.java
+ com.komat.randomtodo.databinding.EmptyStateBinding
 com/komat/randomtodo/databinding/ActivityAddTaskBinding.java
  com.komat.randomtodo.databinding.ActivityAddTaskBinding
 com/komat/randomtodo/databinding/ActivityMainBinding.java

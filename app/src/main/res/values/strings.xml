@@ -9,4 +9,5 @@
     <string name="label_tasks">Tarefas</string>
     <string name="label_editar">Editar</string>
     <string name="label_delete">Delete</string>
+    <string name="label_empty_message">Opa! Parece que você não tem\nnenhuma tarefa.</string>
 </resources>

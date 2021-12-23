@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.komat.randomtodo.databinding.ActivityMainBinding
 import android.app.Activity
+import android.view.View
 import com.komat.randomtodo.datasource.TaskDataSource
 
 
@@ -50,7 +51,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateList(){
+    private fun updateList() {
+        val list = TaskDataSource.getList()
+        binding.includeEmpty.emptyState.visibility =
+            if(list.isEmpty()) View.VISIBLE else View.GONE
         adapter.submitList(TaskDataSource.getList())
     }
 

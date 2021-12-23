@@ -12,7 +12,6 @@ import com.komat.randomtodo.datasource.TaskDataSource
 import com.komat.randomtodo.extensions.format
 import com.komat.randomtodo.extensions.text
 import com.komat.randomtodo.model.Task
-import java.sql.Time
 import java.util.*
 
 class AddTaskActivity : AppCompatActivity() {

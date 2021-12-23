@@ -4,6 +4,8 @@ package com.komat.randomtodo.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -35,6 +37,15 @@ public final class ActivityAddTaskBinding implements ViewBinding {
   public final Guideline guiaEnd;
 
   @NonNull
+  public final RadioButton radioButton;
+
+  @NonNull
+  public final RadioButton radioButton2;
+
+  @NonNull
+  public final RadioButton radioButton3;
+
+  @NonNull
   public final TextInputLayout tilDate;
 
   @NonNull
@@ -44,6 +55,9 @@ public final class ActivityAddTaskBinding implements ViewBinding {
   public final TextInputLayout tilHora;
 
   @NonNull
+  public final RadioGroup tilRadio;
+
+  @NonNull
   public final TextInputLayout tilTitulo;
 
   @NonNull
@@ -51,17 +65,23 @@ public final class ActivityAddTaskBinding implements ViewBinding {
 
   private ActivityAddTaskBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnCancel, @NonNull MaterialButton btnNovaTarefa,
-      @NonNull Guideline guiaBegin, @NonNull Guideline guiaEnd, @NonNull TextInputLayout tilDate,
-      @NonNull TextInputLayout tilDescricao, @NonNull TextInputLayout tilHora,
+      @NonNull Guideline guiaBegin, @NonNull Guideline guiaEnd, @NonNull RadioButton radioButton,
+      @NonNull RadioButton radioButton2, @NonNull RadioButton radioButton3,
+      @NonNull TextInputLayout tilDate, @NonNull TextInputLayout tilDescricao,
+      @NonNull TextInputLayout tilHora, @NonNull RadioGroup tilRadio,
       @NonNull TextInputLayout tilTitulo, @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
     this.btnCancel = btnCancel;
     this.btnNovaTarefa = btnNovaTarefa;
     this.guiaBegin = guiaBegin;
     this.guiaEnd = guiaEnd;
+    this.radioButton = radioButton;
+    this.radioButton2 = radioButton2;
+    this.radioButton3 = radioButton3;
     this.tilDate = tilDate;
     this.tilDescricao = tilDescricao;
     this.tilHora = tilHora;
+    this.tilRadio = tilRadio;
     this.tilTitulo = tilTitulo;
     this.toolbar = toolbar;
   }
@@ -117,6 +137,24 @@ public final class ActivityAddTaskBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.radioButton;
+      RadioButton radioButton = ViewBindings.findChildViewById(rootView, id);
+      if (radioButton == null) {
+        break missingId;
+      }
+
+      id = R.id.radioButton2;
+      RadioButton radioButton2 = ViewBindings.findChildViewById(rootView, id);
+      if (radioButton2 == null) {
+        break missingId;
+      }
+
+      id = R.id.radioButton3;
+      RadioButton radioButton3 = ViewBindings.findChildViewById(rootView, id);
+      if (radioButton3 == null) {
+        break missingId;
+      }
+
       id = R.id.til_date;
       TextInputLayout tilDate = ViewBindings.findChildViewById(rootView, id);
       if (tilDate == null) {
@@ -135,6 +173,12 @@ public final class ActivityAddTaskBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.til_radio;
+      RadioGroup tilRadio = ViewBindings.findChildViewById(rootView, id);
+      if (tilRadio == null) {
+        break missingId;
+      }
+
       id = R.id.til_titulo;
       TextInputLayout tilTitulo = ViewBindings.findChildViewById(rootView, id);
       if (tilTitulo == null) {
@@ -148,7 +192,8 @@ public final class ActivityAddTaskBinding implements ViewBinding {
       }
 
       return new ActivityAddTaskBinding((ConstraintLayout) rootView, btnCancel, btnNovaTarefa,
-          guiaBegin, guiaEnd, tilDate, tilDescricao, tilHora, tilTitulo, toolbar);
+          guiaBegin, guiaEnd, radioButton, radioButton2, radioButton3, tilDate, tilDescricao,
+          tilHora, tilRadio, tilTitulo, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
