@@ -3,6 +3,7 @@ package com.komat.randomtodo.ui
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
@@ -14,6 +15,7 @@ import com.komat.randomtodo.extensions.text
 import com.komat.randomtodo.model.Task
 import java.util.*
 
+
 class AddTaskActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddTaskBinding
@@ -23,6 +25,8 @@ class AddTaskActivity : AppCompatActivity() {
 
         binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         if (intent.hasExtra(TASK_ID)) {
             val taskId = intent.getIntExtra(TASK_ID, 0)
@@ -66,13 +70,31 @@ class AddTaskActivity : AppCompatActivity() {
             finish()
         }
 
+        fun checkButtom(): String {
+            var tipo = ""
+            if (binding.radioButton.isChecked){
+                binding.radioButton2.isChecked = false
+                binding.radioButton3.isChecked = false
+                tipo = "um"
+            }else if (binding.radioButton2.isChecked){
+                binding.radioButton.isChecked = false
+                binding.radioButton3.isChecked = false
+                tipo = "dois"
+            }else if (binding.radioButton3.isChecked){
+                binding.radioButton.isChecked = false
+                binding.radioButton2.isChecked = false
+                tipo = "tres"
+            }
+            return tipo
+        }
+
         binding.btnNovaTarefa.setOnClickListener {
             val task = Task(
                 title = binding.tilTitulo.text,
                 date = binding.tilDate.text,
                 hour = binding.tilHora.text,
                 description = binding.tilDescricao.text,
-                //type = binding.tilRadio.text,
+                type = checkButtom(),
                 id = intent.getIntExtra(TASK_ID, 0)
             )
             TaskDataSource.insertTask(task)

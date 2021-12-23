@@ -6,7 +6,7 @@ data class Task(
     val date: String,
     val description: String,
     val id: Int = 0,
-    //var type: String
+    var type: String,
 ){
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
