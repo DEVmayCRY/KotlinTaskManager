@@ -1946,6 +1946,7 @@ int id buttonPanel 0x7f080063
 int id c_date 0x7f0801e3
 int id c_obseration 0x7f0801e4
 int id c_title 0x7f0801e5
+int id c_type 0x7f0801f2
 int id cache_measures 0x7f080064
 int id callMeasure 0x7f080065
 int id cancel_button 0x7f080066

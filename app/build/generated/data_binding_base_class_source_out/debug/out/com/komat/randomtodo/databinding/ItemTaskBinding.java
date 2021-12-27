@@ -30,14 +30,19 @@ public final class ItemTaskBinding implements ViewBinding {
   public final TextView cTitle;
 
   @NonNull
+  public final TextView cType;
+
+  @NonNull
   public final AppCompatImageView more;
 
   private ItemTaskBinding(@NonNull ConstraintLayout rootView, @NonNull TextView cDate,
-      @NonNull TextView cObseration, @NonNull TextView cTitle, @NonNull AppCompatImageView more) {
+      @NonNull TextView cObseration, @NonNull TextView cTitle, @NonNull TextView cType,
+      @NonNull AppCompatImageView more) {
     this.rootView = rootView;
     this.cDate = cDate;
     this.cObseration = cObseration;
     this.cTitle = cTitle;
+    this.cType = cType;
     this.more = more;
   }
 
@@ -86,13 +91,20 @@ public final class ItemTaskBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.c_type;
+      TextView cType = ViewBindings.findChildViewById(rootView, id);
+      if (cType == null) {
+        break missingId;
+      }
+
       id = R.id.more;
       AppCompatImageView more = ViewBindings.findChildViewById(rootView, id);
       if (more == null) {
         break missingId;
       }
 
-      return new ItemTaskBinding((ConstraintLayout) rootView, cDate, cObseration, cTitle, more);
+      return new ItemTaskBinding((ConstraintLayout) rootView, cDate, cObseration, cTitle, cType,
+          more);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

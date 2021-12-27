@@ -15,7 +15,7 @@ import com.komat.randomtodo.extensions.text
 import com.komat.randomtodo.model.Task
 import java.util.*
 
-
+//AddTaskActivity
 class AddTaskActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddTaskBinding

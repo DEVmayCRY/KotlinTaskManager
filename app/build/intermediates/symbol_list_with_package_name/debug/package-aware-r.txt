@@ -1947,6 +1947,7 @@ id buttonPanel
 id c_date
 id c_obseration
 id c_title
+id c_type
 id cache_measures
 id callMeasure
 id cancel_button

@@ -28,6 +28,17 @@
         tools:text="12/12/2021 19:00" />
 
     <TextView
+        android:id="@+id/c_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/c_date"
+        app:layout_constraintTop_toBottomOf="@id/c_title"
+        tools:text="num" />
+
+    <TextView
         android:id="@+id/c_obseration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

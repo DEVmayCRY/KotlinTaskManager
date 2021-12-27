@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.komat.randomtodo.R
 import com.komat.randomtodo.databinding.ItemTaskBinding
 import com.komat.randomtodo.model.Task
-
+//TaskListAdapter
 class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
 
     var listenerEdit : (Task) -> Unit = {}
@@ -33,6 +33,7 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
             binding.cTitle.text = item.title
             binding.cDate.text = "${item.date}  ${item.hour}"
             binding.cObseration.text = item.description
+            binding.cType.text = item.type
             binding.more.setOnClickListener {
                 showPopup(item)
             }

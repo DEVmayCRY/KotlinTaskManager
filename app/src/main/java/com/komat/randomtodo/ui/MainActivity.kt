@@ -8,7 +8,7 @@ import android.app.Activity
 import android.view.View
 import com.komat.randomtodo.datasource.TaskDataSource
 
-
+//MainActivity
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
